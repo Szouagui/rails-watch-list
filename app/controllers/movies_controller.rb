@@ -1,6 +1,13 @@
 class MoviesController < ApplicationController
-belongs_to list
   def index
-    @movies = Movie.all
+    @movie = Movie.all
+  end
+
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
+  def new
+    @movie = Movie.new
   end
 end
